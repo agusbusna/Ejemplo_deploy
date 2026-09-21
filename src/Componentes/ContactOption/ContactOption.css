@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+
+
+
+.contacto-sidebar{
+    display: flex;
+    flex-direction: column;
+    max-width: 550px;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 8px;
+}
+
+.contacto-sidebar-inside{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: stretch;
+    gap: 5px;
+    width: 100%;
+    overflow: hidden;
+}
+.contacto-sidebar-inside p,
+.contacto-sidebar-inside h2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
+}
+
+.imagen-contacto-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.imagen-contacto{
+    width: 100%;
+}
+.contacto-mensaje-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.contacto-nombre{
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    
+}
+.mensaje-contacto{
+    color: rgb(143, 143, 143);
+    font-size: 14px;
+}
+
+
+.contacto-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 11px;
+    gap: 4px;
+    color: rgb(143, 143, 143);
+}
+
+.fecha-destacada{
+    color: #25D366;
+}
+
+.msj-sin-leer{
+    background-color: #25D366;
+    color: #000000;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
