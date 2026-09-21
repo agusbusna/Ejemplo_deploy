@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
 import './global.css'
-import PostList from './Componentes/PostList/Postlist'
 import Counter from './Componentes/Counter/Counter'
 import LoginForm from './Componentes/LoginForm/LoginForm'
 import { Route, Routes } from 'react-router'
