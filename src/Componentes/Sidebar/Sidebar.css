@@ -14,3 +14,101 @@
     width: auto;
     display: block;
 }
+
+.sidebar-search{
+    padding: 0 12px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-bottom: 1px solid #222;
+    position: sticky;
+    top: 0;
+    background-color: #000;
+    z-index: 2;
+}
+
+.sidebar-search-input-wrap{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #1b1b1b;
+    border: 1px solid #2c2c2c;
+    border-radius: 8px;
+    padding: 7px 10px;
+    transition: border-color 0.2s ease;
+}
+
+.sidebar-search-input-wrap:focus-within{
+    border-color: #25D366;
+}
+
+.sidebar-search-icon{
+    color: rgb(143, 143, 143);
+    flex-shrink: 0;
+}
+
+.sidebar-search-input{
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sidebar-search-input::placeholder{
+    color: rgb(143, 143, 143);
+}
+
+.sidebar-search-clear{
+    background: transparent;
+    border: none;
+    color: rgb(143, 143, 143);
+    font-size: 12px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 2px 4px;
+}
+
+.sidebar-search-clear:hover{
+    color: #fff;
+}
+
+.sidebar-filters{
+    display: flex;
+    gap: 6px;
+}
+
+.sidebar-filter{
+    background-color: #1b1b1b;
+    border: 1px solid #2c2c2c;
+    border-radius: 999px;
+    color: rgb(143, 143, 143);
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    padding: 4px 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sidebar-filter:hover{
+    border-color: #25D366;
+    color: #fff;
+}
+
+.sidebar-filter--active{
+    background-color: #25D366;
+    border-color: #25D366;
+    color: #000;
+    font-weight: 500;
+}
+
+.sidebar-empty{
+    display: block;
+    padding: 16px 12px;
+    color: rgb(143, 143, 143);
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
