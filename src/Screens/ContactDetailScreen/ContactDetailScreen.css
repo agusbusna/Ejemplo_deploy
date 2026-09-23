@@ -1,40 +1,108 @@
-.body-screen-detail{
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+.body-screen-detail {
+    font-family: 'Roboto', sans-serif;
     background-color: #000000;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;    
 }
-.contact-detail-screen{
+
+.contact-detail-screen {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 40px;
-    width: 400px;
+    /* align-items: center; */
+    
+    /* width: 1000px; */
     min-height: 100vh;
+    border-left: 2px solid rgba(218, 215, 215, 0.08);
+    flex: 1;
 
 }
 
-.img-contact-detail-container{
-    width: 120px;
-    height: 120px;
+.header-contact-detail-screen{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 10px 5px;
+    gap: 10px;
+    border-bottom: 1px solid rgba(218, 215, 215, 0.08);
+}
+
+.img-contact-detail-container {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     overflow: hidden;
 }
-.img-contact-detail{
+
+.img-contact-detail {
     object-fit: cover;
     object-position: center;
     width: 100%;
     height: 100%;
 }
-.nombre-contacto-detail{
+
+.nombre-contacto-detail {
     color: white;
     font-weight: 500;
+    font-size: 18px;
 }
 
-.btn-volver{
-    text-decoration: none;
-    display: inline-flex;
+.contact-message-detail{
+    height: 100vh;
+    padding: 5px 40px;
+
+}
+
+.messages-empty {
+    color: #8696a0;
+    font-size: 14px;
+    margin-top: 24px;
+}
+
+.messages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-between;
+    width: 100%;
+    padding: 24px 12px 32px;
+    box-sizing: border-box;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-width: 75%;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background-color: #202c33;
+}
+
+.message--mine {
+    align-self: flex-end;
+    background-color: #005c4b;
+}
+
+.message--theirs {
     align-self: flex-start;
-    text-decoration: none;
-    color: #075E54;
+}
+
+.message-content {
+    margin: 0;
+    color: #e9edef;
+    font-size: 14px;
+    line-height: 1.35;
+    word-break: break-word;
+}
+
+.message-meta {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    font-size: 11px;
+    color: #8696a0;
 }

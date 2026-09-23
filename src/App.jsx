@@ -34,7 +34,6 @@ export default function App() {
                     />
                 </Route>
 
-                <Route path= "/home" element= {<HomeScreen/>}/>
                 <Route path= "/login" element= {<LoginScreen/>}/>
                 
                 <Route path= "*" element= {<NotFoundScreen/>}/>
@@ -57,11 +56,3 @@ export default function App() {
     )
 }
 
-/* 
-Dada una lista de contactos:
-  - Se debe renderizar dicha lista en el HomeScreen, idealmente como un componente llamado Sidebar
-  - Cada contacto debe ser un <Link> que te lleve a /contact/{contact.id}
-  - Crear una nueva Screen llamada ContactDetailScreen 
-  - Asignar ContactDetailScreen a la direccion /contact/:contact_id
-  - ContactDetailScreen debe buscar el detalle del contacto en la lista de contactos y renderizar en pantalla almenos el nombre del contacto
-*/
