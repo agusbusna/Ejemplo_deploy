@@ -1,3 +1,25 @@
+// Fechas dinámicas para pruebas en el data mock:
+// Contacto 1 (Marcos): Hoy a las 14:30 -> Sidebar muestra "14:30"
+// Contacto 2 (John Smith): Hoy a las 08:21 -> Sidebar muestra "08:21"
+// Contacto 3 (Jane Doe): Ayer a las 12:15 -> Sidebar muestra "Ayer"
+// Contacto 4 (Samantha Lee): Fecha más lejana (hace 5 días, 09:35) -> Sidebar muestra "[DD/MM/AAAA]"
+
+const ahora = new Date();
+
+const fechaHoy1 = new Date();
+fechaHoy1.setHours(14, 30, 0, 0);
+
+const fechaHoy2 = new Date();
+fechaHoy2.setHours(8, 21, 0, 0);
+
+const fechaAyer = new Date();
+fechaAyer.setDate(ahora.getDate() - 1);
+fechaAyer.setHours(12, 15, 0, 0);
+
+const fechaLejana = new Date();
+fechaLejana.setDate(ahora.getDate() - 5);
+fechaLejana.setHours(9, 35, 0, 0);
+
 const contact_list_server = [
     {
         id: 1,
@@ -12,7 +34,7 @@ const contact_list_server = [
         ],
         last_message: 'Hey qué tal? Hay que juntarnos! La semana que viene es mi cumple y estas invitada',
         unread_messages: 2,
-        last_message_time: '14:30'
+        last_message_time: fechaHoy1.toISOString()
     },
     {
         id: 2,
@@ -27,34 +49,34 @@ const contact_list_server = [
         ],
         last_message: 'Testeando... 1, 2, 3, probando si funciona esto',
         unread_messages: 3,
-        last_message_time: '08:21'
+        last_message_time: fechaHoy2.toISOString()
     },
     {
         id: 3,
         name: 'Jane Doe',
-        last_connection: 'hoy 12:15',
+        last_connection: 'ayer 12:15',
         image: "https://i.pinimg.com/736x/1a/98/03/1a9803d93ff615ea7fbc198ba53401c5.jpg",
         messages: [
             { id: 1, content: '¡Hola Jane! ¿Cómo andás?', author: 'YO', created_at: '12:00', status: 'seen' },
             { id: 2, content: 'Todo bien por acá', author: 'Jane Doe', created_at: '12:05', status: 'seen' },
-            { id: 3, content: 'Holaaaaaaa queridoooo tanto tiempo', author: 'Jane Doe', created_at: 'hoy 12:15', status: 'unseen' }
+            { id: 3, content: 'Holaaaaaaa queridoooo tanto tiempo', author: 'Jane Doe', created_at: 'ayer 12:15', status: 'unseen' }
         ],
         last_message: 'Holaaaaaaa queridoooo tanto tiempo',
         unread_messages: 1,
-        last_message_time: '12:15'
+        last_message_time: fechaAyer.toISOString()
     },
     {
         id: 4,
         name: 'Samantha Lee',
-        last_connection: 'hoy 09:35',
+        last_connection: 'hace unos días',
         image: "https://i.pinimg.com/736x/b7/5f/d2/b75fd2fc1f8cbb7f65bb4f1a87dcc71e.jpg",
         messages: [
-            { id: 1, content: '¿Vamos a la marcha el viernes?', author: 'YO', created_at: 'hoy 09:30', status: 'seen' },
-            { id: 2, content: 'Genial, vamos juntos!', author: 'Samantha Lee', created_at: 'hoy 09:35', status: 'seen' }
+            { id: 1, content: '¿Vamos a la marcha el viernes?', author: 'YO', created_at: 'hace unos días 09:30', status: 'seen' },
+            { id: 2, content: 'Genial, vamos juntos!', author: 'Samantha Lee', created_at: 'hace unos días 09:35', status: 'seen' }
         ],
         last_message: 'Genial, vamos juntos!',
         unread_messages: null,
-        last_message_time: '09:35'
+        last_message_time: fechaLejana.toISOString()
     }
 ]
 

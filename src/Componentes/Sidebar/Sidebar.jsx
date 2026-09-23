@@ -4,6 +4,7 @@ import { Link } from "react-router"
 import "./Sidebar.css"
 import { ContactContext } from "../../Context/ContactContext"
 import useContactSearchTerm from "../../hooks/useContactSearchTerm"
+import { formatearFechaSidebar } from "../../utils/formatDate"
 
 const FILTROS = [
     { id: "todos", label: "Todos" },
@@ -121,7 +122,7 @@ export default function Sidebar() {
                         ultimo_mensaje={contacto.last_message}
                         nombre={contacto.name}
                         mensajes_sin_leer={contacto.unread_messages}
-                        fecha_ultimo_mensaje={contacto.last_message_time}
+                        fecha_ultimo_mensaje={formatearFechaSidebar(contacto.last_message_time)}
                         key={contacto.id}
                     />
                 </Link>

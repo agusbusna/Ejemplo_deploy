@@ -1,5 +1,6 @@
 import React from "react"
 import "./ContactOption.css"
+import { formatearFechaSidebar } from "../../utils/formatDate"
 
 export default function ContactOption({imagen, nombre, ultimo_mensaje,fecha_ultimo_mensaje, mensajes_sin_leer}) {
     return (
@@ -13,7 +14,7 @@ export default function ContactOption({imagen, nombre, ultimo_mensaje,fecha_ulti
                     <p className="mensaje-contacto">{ultimo_mensaje}</p>
                 </div>
                 <div className="contacto-info">
-                    <span className={mensajes_sin_leer > 0 ? "fecha-destacada": undefined}>{fecha_ultimo_mensaje}</span>
+                    <span className={mensajes_sin_leer > 0 ? "fecha-destacada": undefined}>{formatearFechaSidebar(fecha_ultimo_mensaje)}</span>
                     {mensajes_sin_leer !== null && (
                         <span className="msj-sin-leer">{mensajes_sin_leer}</span>    
                     )}
