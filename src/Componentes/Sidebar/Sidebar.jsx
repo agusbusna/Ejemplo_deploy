@@ -8,8 +8,24 @@ export default function Sidebar() {
 
     const { contacts } = useContext (ContactContext)
 
+        const logo_sidebar = (
+            <div className="sidebar-logo">
+                <img
+                    src="/logo/expanded-logo.svg"
+                    alt="WhatsApp"
+                    width="138"
+                    height="39"
+                />
+            </div>
+        )
+
         if (contacts.length === 0){
-            return <span>No tienes contactos registrados</span>
+            return (
+                <div>
+                    {logo_sidebar}
+                    <span>No tienes contactos registrados</span>
+                </div>
+            )
         }
         const contactos_jsx = []
         for (const contacto of contacts) {
@@ -33,6 +49,7 @@ export default function Sidebar() {
         }
         return (
             <div>
+                {logo_sidebar}
                 {contactos_jsx}
             </div>
     )

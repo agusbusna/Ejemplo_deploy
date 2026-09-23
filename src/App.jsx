@@ -1,7 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
 import './global.css'
-import Counter from './Componentes/Counter/Counter'
-import LoginForm from './Componentes/LoginForm/LoginForm'
 import { Route, Routes } from 'react-router'
 import HomeScreen from './Screens/HomeScreen/HomeScreen'
 import LoginScreen from './Screens/LoginScreen/LoginScreen'

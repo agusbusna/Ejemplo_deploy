@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import { useParams } from 'react-router'
-import { Link } from 'react-router'
 import "./ContactDetailScreen.css"
 import Sidebar from '../../Componentes/Sidebar/Sidebar'
 import { ThemeContext } from '../../Context/ThemeContext'

@@ -2,3 +2,15 @@
     text-decoration: none;
     color: "inherit" 
 }
+
+.sidebar-logo{
+    padding: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-logo img{
+    height: 30px;
+    width: auto;
+    display: block;
+}
