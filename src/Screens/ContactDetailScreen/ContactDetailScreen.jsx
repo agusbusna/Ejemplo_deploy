@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import { useParams } from 'react-router'
 import "./ContactDetailScreen.css"
 import Sidebar from '../../Componentes/Sidebar/Sidebar'
 import { ThemeContext } from '../../Context/ThemeContext'
@@ -11,13 +10,7 @@ export default function ContactDetailScreen() {
     console.log("ContactDetailScreen.jsx", theme)
     const { langSelected } = useContext(LangContext)
     console.log("[ContactDetailScreen.jsx]", langSelected)
-    const { contacts } = useContext(ContactContext)
-
-    const { contact_id } = useParams()
-
-    const contacto_seleccionado = contacts.find(
-        (contacto) => contacto.id === Number(contact_id)
-    )
+    const { contacto_seleccionado } = useContext(ContactContext)
 
     if (!contacto_seleccionado) {
         return (
